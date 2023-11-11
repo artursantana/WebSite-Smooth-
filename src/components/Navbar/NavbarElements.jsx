@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { Link as LinkR } from 'react-router-dom'
+import { Link, Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-router-dom'
 
 
 export const Nav = styled.nav `
 
-background-color: red;
+background-color: black;
 height: 80px;
 
 display: flex;
@@ -57,6 +57,7 @@ display: none;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    color:white;
 }
 `
 
@@ -87,6 +88,33 @@ cursor: pointer;
 
 &active {
     border-bottom: 3px solid #01bf71;
+}
+`
+
+export const NavBtn = styled.nav`
+display: flex;
+align-items: center;
+
+@media (max-width: 768px) {
+    display: none;
+}
+`
+
+export const NavBtnLink = styled(LinkR)`
+border-radius: 50px;
+background-color:#01bf71;
+white-space: nowrap;
+padding: 10px 22px;
+color: #010606;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.2s;
+text-decoration: none;
+
+&:hover {
+    transition: all 0.2s;
+    background: #fff;
+    color: #010606;
 }
 
 `
