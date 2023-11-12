@@ -1,5 +1,5 @@
 import { HeroContainer, HeroBg, VideoBg } from "./HeroElements"
-import Video from '../../'
+import Video from '../../videos/video.mp4';
 
 export const HeroSection = () => {
   return (
