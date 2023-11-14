@@ -4,7 +4,7 @@ import { Button } from "../ButtonElements"
 
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Subtitle, TextWrapper, TopLine, Heading, BtnWrap, Column2, ImgWrap, Img } from "./InfoElements"
 
-export const InfoSection = ({lightBg,id,imgStart, topLine, lightText, headline, darkText,buttonLabel, img, alt}) => {
+export const InfoSection = ({lightBg,id,imgStart, topLine, lightText, headline, description, darkText,buttonLabel, img, alt}) => {
   return (
     <>
         <InfoContainer lightBg={lightBg} id={id}>
@@ -12,7 +12,7 @@ export const InfoSection = ({lightBg,id,imgStart, topLine, lightText, headline, 
         <InfoRow imgStart={imgStart}>
             <Column1>
             <TextWrapper>
-                <TopLine>{TopLine}</TopLine>
+                <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
