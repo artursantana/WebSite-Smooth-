@@ -15,8 +15,8 @@ align-items: center;
 top: 0;
 left: 0;
 transition: 0.3s;
-opacity: ${(props) => (props.isOpen ?'100%' : '0' )};
-top: ${(props) => (props.isOpen) ? '0' : '-100%'};
+opacity: ${({isOpen}) => (isOpen ?'100%' : '0' )};
+visibility: ${({isOpen}) => (isOpen) ? '0' : '-100%'};
 
 ` 
 
@@ -95,7 +95,6 @@ text-decoration: none;
 
 export const SideBtnWrap = styled.div`
 display: flex;
-width: 100%
-;
+width: 100%;
 justify-content: center;
 `

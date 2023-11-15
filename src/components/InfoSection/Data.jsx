@@ -1,15 +1,17 @@
+import carImage from '../../imgs/car.svg';
 
 export const homeObjOne = {
     id: 'about',
-    lightBg: false,
-    lightText: true,
+    lightbg: false,
+    lighttext: true,
     lightTextDesc: true,
     topLine: 'Unlimited transactions with zero fees',
     description: 'get access to our exclusive app that allows you to send unlimited transaction without getting charged any fees',
     buttonLabel: 'Get started',
-    imgStart: false,
+    imgstart: false,
+    img: carImage,
     alt: 'Car',
     dark: true,
     primary:true,
-    darkText:false
+    darktext:false
 }

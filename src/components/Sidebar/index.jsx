@@ -3,11 +3,11 @@ import { SidebarContainer, Icon, CloseIcon,SidebarWrapper, SidebarMenu, SidebarL
 import PropTypes from 'prop-types';
 
 
-export const Sidebar = ({isOpen, toggle}) => {
+export const Sidebar = ({isOpen = false, toggle}) => {
 
 
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isopen={isOpen.toString()} onClick={toggle}>
         <Icon onClick={toggle}>
             <CloseIcon />
         </Icon>

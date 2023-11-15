@@ -8,14 +8,14 @@ import { InfoContainer, InfoWrapper, InfoRow, Column1, Subtitle, TextWrapper, To
 export const InfoSection = ({lightBg,id,imgStart, topLine, lightText, headline, description, darkText,buttonLabel, img, alt}) => {
   return (
     <>
-        <InfoContainer lightBg={lightBg} id={id}>
+        <InfoContainer lightbg={lightBg} id={id}>
     <InfoWrapper>
-        <InfoRow imgStart={imgStart}>
+        <InfoRow imgstart={imgStart}>
             <Column1>
             <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
+                <Heading lighttext={lightText}>{headline}</Heading>
+                <Subtitle darktext={darkText}>{description}</Subtitle>
                 <BtnWrap>
                     <Button to='home'>{buttonLabel}</Button>
                 </BtnWrap>
