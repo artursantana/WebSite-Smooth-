@@ -1,7 +1,11 @@
 import { SidebarContainer, Icon, CloseIcon,SidebarWrapper, SidebarMenu, SidebarLink, SidebarRoute, SideBtnWrap } from './SidebarElements'
 
+import PropTypes from 'prop-types';
+
 
 export const Sidebar = ({isOpen, toggle}) => {
+
+
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
@@ -28,4 +32,10 @@ export const Sidebar = ({isOpen, toggle}) => {
         </SidebarWrapper>
     </SidebarContainer>
   )
+  
 }
+Sidebar.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    toggle: PropTypes.func.isRequired,
+  };
+

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 
 import { Button } from "../ButtonElements"
@@ -31,3 +32,17 @@ export const InfoSection = ({lightBg,id,imgStart, topLine, lightText, headline, 
     </>
   )
 }
+
+InfoSection.propTypes = {
+    lightBg: PropTypes.bool,
+    id: PropTypes.string,
+    imgStart: PropTypes.bool,
+    topLine: PropTypes.string,
+    lightText: PropTypes.bool,
+    headline: PropTypes.string,
+    description: PropTypes.string,
+    darkText: PropTypes.bool,
+    buttonLabel: PropTypes.string,
+    img: PropTypes.string,
+    alt: PropTypes.string,
+  };
