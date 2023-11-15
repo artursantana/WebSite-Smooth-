@@ -11,5 +11,6 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['../../videos/video.mp4'],
+    
   },
 });
