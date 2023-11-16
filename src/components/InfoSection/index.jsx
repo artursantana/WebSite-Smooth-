@@ -7,6 +7,7 @@ import { InfoContainer, InfoWrapper, InfoRow, Column1, Subtitle, TextWrapper, To
 export const InfoSection = ({lightBg,id,imgstart, topLine, lightText, headline, description, darkText,buttonLabel, img, alt, primary, dark, dark2}) => {
   return (
     <>
+
         <InfoContainer lightbg={lightBg} id={id}>
     <InfoWrapper>
         <InfoRow imgstart={imgstart ? 'true' : 'false'}>

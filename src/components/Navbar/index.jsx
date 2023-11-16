@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import { FaBars } from 'react-icons/fa'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavLinks, NavItem, NavBtn, NavBtnLink } from './NavbarElements'
 
@@ -34,3 +34,8 @@ export const Navbar = ({toggle}) => {
    </>
     )
   }
+
+  Navbar.propTypes = {
+    toggle: PropTypes.func.isRequired,
+  }
+  
