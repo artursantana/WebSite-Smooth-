@@ -22,15 +22,17 @@ padding: 0 24px;
 justify-content: center;
 `
 
-export const InfoRow = styled.div`
-display: grid;
-grid-auto-columns:minmax(auto, 1fr);
-align-items: center;
-grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+export const InfoRow = styled.div.attrs(props => ({
+    imgstart: undefined, // This filters out imgstart from being passed to the DOM
+  }))`
+  display: grid;
+  grid-auto-columns: minmax(auto, 1fr);
+  align-items: center;
+  grid-template-areas: ${({ imgstart }) => (imgstart ? `'col2 col1'` : `'col1 col2'`)};
 
-@media (max-width: 768px) {
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1 col2'` : `'col1 col1' 'col2 col2'`)}
-}
+  @media (max-width: 768px) {
+    grid-template-areas: ${({ imgstart }) => (imgstart ? `'col1 col2'` : `'col1 col1' 'col2 col2'`)};
+  }
 `
 
 export const Column1 = styled.div`
@@ -63,12 +65,12 @@ margin-bottom: 16px;
 `
 
 export const Heading = styled.h1`
-color: #fff;
+
 margin-bottom: 24px;
 font-size: 48px;
 line-height: 1.1;
 font-weight: 600;
-color: ${({lightText}) => (lightText ? '#f7f8fa' : '010606')};
+color: ${(lighttext) => (lighttext ? '#fff' : '#010606')};
 
 @media (max-width: 480px) {
     font-size: 32px;

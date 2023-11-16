@@ -1,23 +1,31 @@
 import PropTypes from 'prop-types';
 
-
 import { Button } from "../ButtonElements"
 
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Subtitle, TextWrapper, TopLine, Heading, BtnWrap, Column2, ImgWrap, Img } from "./InfoElements"
 
-export const InfoSection = ({lightBg,id,imgStart, topLine, lightText, headline, description, darkText,buttonLabel, img, alt}) => {
+export const InfoSection = ({lightBg,id,imgstart, topLine, lightText, headline, description, darkText,buttonLabel, img, alt, primary, dark, dark2}) => {
   return (
     <>
         <InfoContainer lightbg={lightBg} id={id}>
     <InfoWrapper>
-        <InfoRow imgstart={imgStart}>
+        <InfoRow imgstart={imgstart ? 'true' : 'false'}>
             <Column1>
             <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading lighttext={lightText}>{headline}</Heading>
-                <Subtitle darktext={darkText}>{description}</Subtitle>
+                <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                    <Button to='home'>{buttonLabel}</Button>
+                    <Button to='home'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                    >{buttonLabel}</Button>
                 </BtnWrap>
             </TextWrapper>
             </Column1>
@@ -36,7 +44,7 @@ export const InfoSection = ({lightBg,id,imgStart, topLine, lightText, headline, 
 InfoSection.propTypes = {
     lightBg: PropTypes.bool,
     id: PropTypes.string,
-    imgStart: PropTypes.bool,
+    imgstart: PropTypes.bool,
     topLine: PropTypes.string,
     lightText: PropTypes.bool,
     headline: PropTypes.string,
@@ -45,4 +53,7 @@ InfoSection.propTypes = {
     buttonLabel: PropTypes.string,
     img: PropTypes.string,
     alt: PropTypes.string,
+    primary: PropTypes.bool,
+    dark: PropTypes.bool,
+    dark2: PropTypes.bool,
   };

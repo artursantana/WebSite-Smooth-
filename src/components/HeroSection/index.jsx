@@ -20,7 +20,7 @@ const onHover = () => {
               <HeroH1>Virtual Banking Made Easy</HeroH1>
               <HeroP>Sign up for a new accoun today and receive $250 in next payment.</HeroP>
               <HeroBtnWrapper>
-              <Button to='signup' onMouseEnter={onHover}onMouseLeave={onHover}
+              <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}
               primary='true'
               dark='true'
               >
